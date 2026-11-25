@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "candidate": "T3+w16+w32 raw/flip TTA equal probability ensemble",
+  "labels": [
+    "Angry",
+    "Disgust",
+    "Fear",
+    "Happy",
+    "Sad",
+    "Surprise",
+    "Neutral"
+  ],
+  "preprocessing": "float32 / 255; [N,1,48,48]",
+  "data_sha256": "814f0782aac66709f820dec832c0876d0727cde102c94dd60fd2e519c09dbb63",
+  "models": [
+    {
+      "key": "w32",
+      "name": "t37_w32_s101",
+      "checkpoint": "checkpoints/t37_w32_s101/best.pt",
+      "sha256": "712b65af54576eb1ad97d502500183eec1d172039d707b01d6ac974c4e3a061f",
+      "format_version": 37,
+      "epoch": 93,
+      "config_path": "configs/t37/w32_s101.json",
+      "config_sha256": "94ae443dacd91ac2b906cdf7d7850e67b315545cb6a16ce804e044217daef114",
+      "config": {
+        "name": "t37_w32_s101",
+        "width": 32,
+        "seed": 101,
+        "device": "cpu",
+        "threads": 4,
+        "csv_path": "data/icml_face_data_副本.csv",
+        "epochs": 100,
+        "batch_size": 128,
+        "optimizer": "SGD",
+        "momentum": 0.9,
+        "nesterov": true,
+        "weight_decay": 0.0005,
+        "lr_start": 0.005,
+        "lr_peak": 0.05,
+        "lr_min": 1e-05,
+        "warmup_epochs": 5,
+        "scheduler": "epoch start: epochs1..5 linear endpoints; epochs6..100 cosine endpoints",
+        "dropout": 0.3,
+        "initialization": "Kaiming normal fan_out relu Conv/Linear; bias0; BN1/0",
+        "augmentation": "flip p0.5; reflected translation +-4px",
+        "loss": "ordinary CE",
+        "selection": "Public accuracy; ties lower CE; ties earlier epoch",
+        "ema": false,
+        "label_smoothing": 0,
+        "class_weight": null
+      },
+      "parameters": 2796263,
+      "state_sha256": "8729863873c3d6dced9d313bca329e3c4ce19f68ccced3df0b987f4703002a91"
+    },
+    {
+      "key": "t3",
+      "name": "t3_06_unweighted_s42",
+      "checkpoint": "checkpoints/t3_06_unweighted_s42/best.pt",
+      "sha256": "4d7103ea4cb39b69ae5358f9767befb4a581d472da7bd348c2715a12a82925f8",
+      "format_version": 3,
+      "epoch": 56,
+      "config_path": "configs/t3/06_unweighted.json",
+      "config_sha256": "bfc1d26a3992f28b10fc2bee2bf6a78658fd81a5ce2a19ac01b1ff429a88ec77",
+      "config": {
+        "csv_path": "data/icml_face_data_副本.csv",
+        "max_epoch": 58,
+        "learning_rate": 0.0002,
+        "weight_decay": 0.0001,
+        "batch_size": 256,
+        "seed": 42,
+        "threads": 4,
+        "device": "mps",
+        "augmentation": true,
+        "lr_patience": 3,
+        "early_stopping": 8,
+        "name": "t3_06_unweighted_s42",
+        "model": "resnet18_w16",
+        "initialize_from": "checkpoints/t3_05_resnet_aug_mps_s42/best.pt",
+        "start_epoch": 50,
+        "include_initial_candidate": false,
+        "class_weight_power": 0
+      },
+      "parameters": 700791,
+      "state_sha256": "33efbc37a1ed602cf9ff868beffeefc7c88495cb38c74c1c456ff477ab148874"
+    },
+    {
+      "key": "w16",
+      "name": "t37_w16_s101",
+      "checkpoint": "checkpoints/t37_w16_s101/best.pt",
+      "sha256": "f4f4eb804aa5d012d5ad14c52dd5060bb5ca7438c88ac42259442b1c1dc70cfd",
+      "format_version": 37,
+      "epoch": 97,
+      "config_path": "configs/t37/w16_s101.json",
+      "config_sha256": "4fcd9b4e4356654a004f47628540ddfac575c39413920fd16d3b991801f56174",
+      "config": {
+        "name": "t37_w16_s101",
+        "width": 16,
+        "seed": 101,
+        "device": "cpu",
+        "threads": 4,
+        "csv_path": "data/icml_face_data_副本.csv",
+        "epochs": 100,
+        "batch_size": 128,
+        "optimizer": "SGD",
+        "momentum": 0.9,
+        "nesterov": true,
+        "weight_decay": 0.0005,
+        "lr_start": 0.005,
+        "lr_peak": 0.05,
+        "lr_min": 1e-05,
+        "warmup_epochs": 5,
+        "scheduler": "epoch start: epochs1..5 linear endpoints; epochs6..100 cosine endpoints",
+        "dropout": 0.3,
+        "initialization": "Kaiming normal fan_out relu Conv/Linear; bias0; BN1/0",
+        "augmentation": "flip p0.5; reflected translation +-4px",
+        "loss": "ordinary CE",
+        "selection": "Public accuracy; ties lower CE; ties earlier epoch",
+        "ema": false,
+        "label_smoothing": 0,
+        "class_weight": null
+      },
+      "parameters": 700791,
+      "state_sha256": "caf48f72a7ccff19592f385b0114e0b844cb07a3f6466dc51c36d01e9f4a107a"
+    }
+  ],
+  "model_weights": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "view_weights": [
+    0.5,
+    0.5
+  ],
+  "device": "cpu",
+  "threads": 1,
+  "batch_size": 128,
+  "historical_sources": {
+    "results/t38_inference_20261030/inference.py": "4c92ad0a2ece8c95a1e8d33bce8967fc8f4d7b384fb09ba818934f8b6e1a7b7b",
+    "results/t38_triple_tta_20261104/study.py": "e9ad21906c3fffcf4c0376575e389575c3dab9e2510af05cab70039e8b070c67",
+    "src/t3_models.py": "eca368f50c02990e0150990a0506c22adaaa9cb37c17cdcd6d30fbee4de01a20",
+    "src/t37_models.py": "df969159ff7c2fe0bedd99d0bdbe7d1f273de7578508c25ceef9234c8631b7f3",
+    "src/model.py": "a187cfe7bafc1e2f7e7d450f251b9e320c66fc915ca21221df59b6d5a4d9317d",
+    "src/dataset.py": "1ad8381814ef9bc05cef107cb70d4f4b0f457ec41eb53adda9be86b947d3e799"
+  },
+  "validation": {
+    "split": "PublicTest",
+    "summary": "results/t38_triple_tta_20261104/run01/summary.json",
+    "summary_sha256": "75d97e62881272ae742fee04fd3b3f8dddb710fddc97c26fa02345cc1f1a09d0",
+    "predictions": "results/t38_triple_tta_20261104/run01/predictions.npz",
+    "predictions_sha256": "f129cf438aff5469f02f49affe8ba388bd80a4b27bf712b73612f99d40adb6ca",
+    "expected": {
+      "accuracy": 0.7261075508498189,
+      "correct": 2606,
+      "samples": 3589,
+      "macro_f1": 0.7219539014459306,
+      "per_class": [
+        {
+          "label": 0,
+          "name": "Angry",
+          "support": 467,
+          "precision": 0.6517311608961304,
+          "recall": 0.6852248394004282,
+          "f1": 0.6680584551148225
+        },
+        {
+          "label": 1,
+          "name": "Disgust",
+          "support": 56,
+          "precision": 0.925,
+          "recall": 0.6607142857142857,
+          "f1": 0.7708333333333333
+        },
+        {
+          "label": 2,
+          "name": "Fear",
+          "support": 496,
+          "precision": 0.6241610738255033,
+          "recall": 0.5625,
+          "f1": 0.5917285259809119
+        },
+        {
+          "label": 3,
+          "name": "Happy",
+          "support": 895,
+          "precision": 0.8823529411764706,
+          "recall": 0.888268156424581,
+          "f1": 0.8853006681514477
+        },
+        {
+          "label": 4,
+          "name": "Sad",
+          "support": 653,
+          "precision": 0.6390625,
+          "recall": 0.6263399693721287,
+          "f1": 0.6326372776488786
+        },
+        {
+          "label": 5,
+          "name": "Surprise",
+          "support": 415,
+          "precision": 0.8506024096385543,
+          "recall": 0.8506024096385543,
+          "f1": 0.8506024096385543
+        },
+        {
+          "label": 6,
+          "name": "Neutral",
+          "support": 607,
+          "precision": 0.6305343511450382,
+          "recall": 0.6803953871499177,
+          "f1": 0.6545166402535658
+        }
+      ],
+      "confusion_matrix": [
+        [
+          320,
+          2,
+          43,
+          13,
+          44,
+          8,
+          37
+        ],
+        [
+          11,
+          37,
+          2,
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          50,
+          1,
+          279,
+          10,
+          84,
+          24,
+          48
+        ],
+        [
+          7,
+          0,
+          10,
+          795,
+          16,
+          15,
+          52
+        ],
+        [
+          53,
+          0,
+          65,
+          22,
+          409,
+          8,
+          96
+        ],
+        [
+          6,
+          0,
+          27,
+          12,
+          8,
+          353,
+          9
+        ],
+        [
+          44,
+          0,
+          21,
+          49,
+          73,
+          7,
+          413
+        ]
+      ],
+      "cross_entropy": 0.893157062105609
+    }
+  },
+  "csv_path": "data/icml_face_data_副本.csv"
+}

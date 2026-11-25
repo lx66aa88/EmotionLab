@@ -1,0 +1,31 @@
+{
+  "opencv_python": "4.11.0.86",
+  "opencv": "4.11.0",
+  "wheel": {
+    "filename": "opencv_python_headless-4.11.0.86-cp37-abi3-macosx_13_0_arm64.whl",
+    "sha256": "48128188ade4a7e517237c8e1e11a9cdf5c282761473383e77beb875bb1e61ca",
+    "size": 37326460,
+    "url": "https://files.pythonhosted.org/packages/dc/53/2c50afa0b1e05ecdb4603818e85f7d174e683d874ef63a6abe3ac92220c8/opencv_python_headless-4.11.0.86-cp37-abi3-macosx_13_0_arm64.whl"
+  },
+  "model": {
+    "file": "face_detection_yunet_2023mar.onnx",
+    "size": 232589,
+    "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+    "repository": "https://github.com/opencv/opencv_zoo",
+    "commit": "48b10fa505aeb51fbd127fc60a5c660040e823b7",
+    "source": "https://github.com/opencv/opencv_zoo/blob/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_detection_yunet/README.md",
+    "download": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_detection_yunet/face_detection_yunet_2023mar.onnx",
+    "license": "MIT; see LICENSE",
+    "compatibility": "OpenCV 4.x static 2023mar; not 5.x 2026may dynamic model"
+  },
+  "runtime_download": false,
+  "package_license": "OpenCV Apache-2.0; Python wrapper MIT; bundled third-party notices in vendor/t52/licenses",
+  "compatibility_verified": {
+    "python": "3.9.6",
+    "macos": "27.0.1",
+    "architecture": "arm64",
+    "numpy": "2.0.2 (unchanged existing .venv)",
+    "wheel_tag": "cp37-abi3-macosx_13_0_arm64",
+    "test": "Real FaceDetectorYN load, single/multi-face detection in evidence/asgi_final"
+  }
+}

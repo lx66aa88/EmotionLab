@@ -1,0 +1,19 @@
+{
+  "csv_path": "data/icml_face_data_\u526f\u672c.csv",
+  "max_epoch": 58,
+  "learning_rate": 0.0002,
+  "weight_decay": 0.0001,
+  "batch_size": 256,
+  "seed": 42,
+  "threads": 4,
+  "device": "mps",
+  "augmentation": true,
+  "lr_patience": 3,
+  "early_stopping": 8,
+  "name": "t3_07_weighted_s42",
+  "model": "resnet18_w16",
+  "initialize_from": "checkpoints/t3_05_resnet_aug_mps_s42/best.pt",
+  "start_epoch": 50,
+  "include_initial_candidate": false,
+  "class_weight_power": 0.5
+}

@@ -1,0 +1,7 @@
+# Python 3.9-compatible web adapter. Installed separately with --target .t51-deps.
+# Existing T4 numpy/torch/Pillow stay untouched.
+fastapi==0.115.14
+starlette==0.46.2
+pydantic==2.11.9
+uvicorn==0.34.3
+anyio==4.11.0

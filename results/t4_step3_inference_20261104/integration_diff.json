@@ -1,0 +1,80 @@
+{
+  "historical_code_already_in_main_project": true,
+  "same_name_overwrites": false,
+  "historical_sources_modified": false,
+  "extracted_functions": [
+    {
+      "function": "validate_images",
+      "source": "results/t38_inference_20261030/inference.py",
+      "source_file_sha256": "4c92ad0a2ece8c95a1e8d33bce8967fc8f4d7b384fb09ba818934f8b6e1a7b7b",
+      "source_function_sha256": "d36de64bd07c62080ed2bc5ee40accb5570c63802223d793318b1db7c91974d0",
+      "extracted_function_sha256": "d36de64bd07c62080ed2bc5ee40accb5570c63802223d793318b1db7c91974d0",
+      "change": "verbatim"
+    },
+    {
+      "function": "horizontal_flip",
+      "source": "results/t38_inference_20261030/inference.py",
+      "source_file_sha256": "4c92ad0a2ece8c95a1e8d33bce8967fc8f4d7b384fb09ba818934f8b6e1a7b7b",
+      "source_function_sha256": "11dc15551d3a71013262b153fec4bf32d6a18afa6febdc9b584164db0a987af5",
+      "extracted_function_sha256": "11dc15551d3a71013262b153fec4bf32d6a18afa6febdc9b584164db0a987af5",
+      "change": "verbatim"
+    },
+    {
+      "function": "validate_log_probs",
+      "source": "results/t38_inference_20261030/inference.py",
+      "source_file_sha256": "4c92ad0a2ece8c95a1e8d33bce8967fc8f4d7b384fb09ba818934f8b6e1a7b7b",
+      "source_function_sha256": "a1148d08e1eb8ac6de52d8fa76ebb9bc0b40a25620549feda323c3f7a8c1bdf8",
+      "extracted_function_sha256": "a1148d08e1eb8ac6de52d8fa76ebb9bc0b40a25620549feda323c3f7a8c1bdf8",
+      "change": "verbatim"
+    },
+    {
+      "function": "equal_probability_mean",
+      "source": "results/t38_inference_20261030/inference.py",
+      "source_file_sha256": "4c92ad0a2ece8c95a1e8d33bce8967fc8f4d7b384fb09ba818934f8b6e1a7b7b",
+      "source_function_sha256": "38d82a1903ef25d3b80d092426a27e1daac439849d46c784626a0d5a178d281c",
+      "extracted_function_sha256": "38d82a1903ef25d3b80d092426a27e1daac439849d46c784626a0d5a178d281c",
+      "change": "verbatim"
+    },
+    {
+      "function": "state_sha256",
+      "source": "results/t38_inference_20261030/inference.py",
+      "source_file_sha256": "4c92ad0a2ece8c95a1e8d33bce8967fc8f4d7b384fb09ba818934f8b6e1a7b7b",
+      "source_function_sha256": "382d88fec17e3993e3ed5a0a43fb03dfec6316681a51c7cab91f7cbfe7d81879",
+      "extracted_function_sha256": "382d88fec17e3993e3ed5a0a43fb03dfec6316681a51c7cab91f7cbfe7d81879",
+      "change": "verbatim"
+    },
+    {
+      "function": "infer_view",
+      "source": "results/t38_inference_20261030/inference.py",
+      "source_file_sha256": "4c92ad0a2ece8c95a1e8d33bce8967fc8f4d7b384fb09ba818934f8b6e1a7b7b",
+      "source_function_sha256": "cd693e662d5a7ccd574336b9087b8c32719375f9a65d9823366704afcba08fb1",
+      "extracted_function_sha256": "cd693e662d5a7ccd574336b9087b8c32719375f9a65d9823366704afcba08fb1",
+      "change": "verbatim"
+    },
+    {
+      "function": "load_public",
+      "source": "results/t38_inference_20261030/inference.py",
+      "source_file_sha256": "4c92ad0a2ece8c95a1e8d33bce8967fc8f4d7b384fb09ba818934f8b6e1a7b7b",
+      "source_function_sha256": "e2d22c72060ad86f2cd3a2d195f334316a1ac1712906a19839657f313856124c",
+      "extracted_function_sha256": "e2d22c72060ad86f2cd3a2d195f334316a1ac1712906a19839657f313856124c",
+      "change": "verbatim"
+    },
+    {
+      "function": "equal_three_model_mean",
+      "source": "results/t38_triple_tta_20261104/study.py",
+      "source_file_sha256": "e9ad21906c3fffcf4c0376575e389575c3dab9e2510af05cab70039e8b070c67",
+      "source_function_sha256": "052d889a03daef7c35e45a11f4fa07299bcf90db7f3c466668cfd45cfac11e5c",
+      "extracted_function_sha256": "052d889a03daef7c35e45a11f4fa07299bcf90db7f3c466668cfd45cfac11e5c",
+      "change": "verbatim"
+    },
+    {
+      "function": "calculate",
+      "source": "results/t38_triple_tta_20261104/study.py",
+      "source_file_sha256": "e9ad21906c3fffcf4c0376575e389575c3dab9e2510af05cab70039e8b070c67",
+      "source_function_sha256": "551b9ada19df90d8f074b11dceb89ae744eeba37564a63aca53f1061d4848a0f",
+      "extracted_function_sha256": "b85cd4d53834455ba174c30bf65afbaac5567ac2bf3a57ff91515310c7a2fe65",
+      "change": "remove old. module qualifier only"
+    }
+  ],
+  "architecture_loaders": "reuse src.t3_models.load_t3 and src.t37_models.load unchanged"
+}

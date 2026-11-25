@@ -1,0 +1,142 @@
+{
+  "best_epoch": 56,
+  "epochs_completed": 8,
+  "last_epoch": 58,
+  "stop_reason": "max_epoch",
+  "best_validation": {
+    "accuracy": 0.6834772917247144,
+    "correct": 2453,
+    "samples": 3589,
+    "macro_f1": 0.6597928429537178,
+    "per_class": [
+      {
+        "label": 0,
+        "name": "Angry",
+        "support": 467,
+        "precision": 0.5871743486973948,
+        "recall": 0.6274089935760171,
+        "f1": 0.6066252587991718
+      },
+      {
+        "label": 1,
+        "name": "Disgust",
+        "support": 56,
+        "precision": 0.75,
+        "recall": 0.48214285714285715,
+        "f1": 0.5869565217391304
+      },
+      {
+        "label": 2,
+        "name": "Fear",
+        "support": 496,
+        "precision": 0.5335968379446641,
+        "recall": 0.5443548387096774,
+        "f1": 0.5389221556886227
+      },
+      {
+        "label": 3,
+        "name": "Happy",
+        "support": 895,
+        "precision": 0.8641975308641975,
+        "recall": 0.8603351955307262,
+        "f1": 0.8622620380739081
+      },
+      {
+        "label": 4,
+        "name": "Sad",
+        "support": 653,
+        "precision": 0.6013513513513513,
+        "recall": 0.5451761102603369,
+        "f1": 0.5718875502008031
+      },
+      {
+        "label": 5,
+        "name": "Surprise",
+        "support": 415,
+        "precision": 0.830423940149626,
+        "recall": 0.8024096385542169,
+        "f1": 0.8161764705882353
+      },
+      {
+        "label": 6,
+        "name": "Neutral",
+        "support": 607,
+        "precision": 0.608433734939759,
+        "recall": 0.6655683690280065,
+        "f1": 0.6357199055861527
+      }
+    ],
+    "confusion_matrix": [
+      [
+        293,
+        4,
+        55,
+        14,
+        52,
+        9,
+        40
+      ],
+      [
+        14,
+        27,
+        9,
+        2,
+        4,
+        0,
+        0
+      ],
+      [
+        50,
+        0,
+        270,
+        12,
+        80,
+        26,
+        58
+      ],
+      [
+        21,
+        0,
+        16,
+        770,
+        18,
+        17,
+        53
+      ],
+      [
+        72,
+        3,
+        85,
+        30,
+        356,
+        9,
+        98
+      ],
+      [
+        9,
+        0,
+        41,
+        14,
+        7,
+        333,
+        11
+      ],
+      [
+        40,
+        2,
+        30,
+        49,
+        75,
+        7,
+        404
+      ]
+    ],
+    "loss": 1.1483075661923634,
+    "objective": 1.1483075661923634
+  },
+  "reload_verified": true,
+  "elapsed_seconds": 162.9830695,
+  "best_checkpoint": "checkpoints/t3_06_unweighted_s42/best.pt",
+  "checkpoint_sha256": "4d7103ea4cb39b69ae5358f9767befb4a581d472da7bd348c2715a12a82925f8",
+  "private_test_used": false
+}

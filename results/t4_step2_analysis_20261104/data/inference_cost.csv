@@ -1,0 +1,9 @@
+﻿stage,method,seconds,samples,device,threads,scope,source
+t38_double_tta_20261104,baseline_raw_ensemble,33.168585044000004,3589,cpu,1,shared observed forward components; excludes full end-to-end pipeline,results/t38_double_tta_20261104/run01/summary.json
+t38_double_tta_20261104,w32_tta,51.995799750000025,3589,cpu,1,shared observed forward components; excludes full end-to-end pipeline,results/t38_double_tta_20261104/run01/summary.json
+t38_double_tta_20261104,t3_tta,15.822324751999993,3589,cpu,1,shared observed forward components; excludes full end-to-end pipeline,results/t38_double_tta_20261104/run01/summary.json
+t38_double_tta_20261104,double_tta_ensemble,67.83060100200001,3589,cpu,1,shared observed forward components; excludes full end-to-end pipeline,results/t38_double_tta_20261104/run01/summary.json
+t38_triple_tta_20261104,double_tta_baseline,64.51694508400001,3589,cpu,1,shared observed forward components; excludes full end-to-end pipeline,results/t38_triple_tta_20261104/run01/summary.json
+t38_triple_tta_20261104,triple_tta_candidate,80.09019108700006,3589,cpu,1,shared observed forward components; excludes full end-to-end pipeline,results/t38_triple_tta_20261104/run01/summary.json
+t38_fourview_20261104,two_view_baseline,76.11385966900015,3589,cpu,1,shared observed forward components; excludes full end-to-end pipeline,results/t38_fourview_20261104/run01/summary.json
+t38_fourview_20261104,four_view_candidate,152.82339529000015,3589,cpu,1,shared observed forward components; excludes full end-to-end pipeline,results/t38_fourview_20261104/run01/summary.json

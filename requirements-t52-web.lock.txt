@@ -1,0 +1,3 @@
+# Additional package only. T4 .venv and T5.1 .t51-deps remain unchanged.
+# CPython3.9.6 / macOS13+ arm64; use --no-deps --target .t52-deps.
+opencv-python-headless==4.11.0.86 --hash=sha256:48128188ade4a7e517237c8e1e11a9cdf5c282761473383e77beb875bb1e61ca

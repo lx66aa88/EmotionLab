@@ -1,0 +1,283 @@
+{
+  "name": "t35_c_photo_smooth_ema_s43",
+  "streams": {
+    "online": {
+      "best_local_epoch": 13,
+      "best_validation": {
+        "accuracy": 0.684870437447757,
+        "correct": 2458,
+        "samples": 3589,
+        "macro_f1": 0.6578105532772442,
+        "per_class": [
+          {
+            "label": 0,
+            "name": "Angry",
+            "support": 467,
+            "precision": 0.5831702544031311,
+            "recall": 0.6381156316916489,
+            "f1": 0.6094069529652352
+          },
+          {
+            "label": 1,
+            "name": "Disgust",
+            "support": 56,
+            "precision": 0.6170212765957447,
+            "recall": 0.5178571428571429,
+            "f1": 0.5631067961165048
+          },
+          {
+            "label": 2,
+            "name": "Fear",
+            "support": 496,
+            "precision": 0.5887850467289719,
+            "recall": 0.5080645161290323,
+            "f1": 0.5454545454545454
+          },
+          {
+            "label": 3,
+            "name": "Happy",
+            "support": 895,
+            "precision": 0.8792710706150342,
+            "recall": 0.8625698324022346,
+            "f1": 0.8708403835307388
+          },
+          {
+            "label": 4,
+            "name": "Sad",
+            "support": 653,
+            "precision": 0.5557122708039492,
+            "recall": 0.6033690658499234,
+            "f1": 0.57856093979442
+          },
+          {
+            "label": 5,
+            "name": "Surprise",
+            "support": 415,
+            "precision": 0.821256038647343,
+            "recall": 0.8192771084337349,
+            "f1": 0.8202653799758746
+          },
+          {
+            "label": 6,
+            "name": "Neutral",
+            "support": 607,
+            "precision": 0.6196013289036545,
+            "recall": 0.6144975288303131,
+            "f1": 0.6170388751033913
+          }
+        ],
+        "confusion_matrix": [
+          [
+            298,
+            5,
+            37,
+            13,
+            61,
+            13,
+            40
+          ],
+          [
+            17,
+            29,
+            5,
+            0,
+            5,
+            0,
+            0
+          ],
+          [
+            50,
+            3,
+            252,
+            13,
+            103,
+            29,
+            46
+          ],
+          [
+            20,
+            0,
+            8,
+            772,
+            26,
+            17,
+            52
+          ],
+          [
+            76,
+            7,
+            63,
+            24,
+            394,
+            8,
+            81
+          ],
+          [
+            9,
+            0,
+            37,
+            12,
+            7,
+            340,
+            10
+          ],
+          [
+            41,
+            3,
+            26,
+            44,
+            113,
+            7,
+            373
+          ]
+        ],
+        "loss": 1.0091009376506748,
+        "objective": 1.0091009376174596
+      },
+      "best_checkpoint": "checkpoints/t35_c_photo_smooth_ema_s43/online_best.pt",
+      "checkpoint_sha256": "8d8e6750b94173ffe38fb521ec0979faad0c23fd70941b6d792a6ded42a22fb3",
+      "reload_verified": true
+    },
+    "ema": {
+      "best_local_epoch": 9,
+      "best_validation": {
+        "accuracy": 0.6840345500139314,
+        "correct": 2455,
+        "samples": 3589,
+        "macro_f1": 0.6544806341605697,
+        "per_class": [
+          {
+            "label": 0,
+            "name": "Angry",
+            "support": 467,
+            "precision": 0.5983772819472617,
+            "recall": 0.6316916488222698,
+            "f1": 0.6145833333333334
+          },
+          {
+            "label": 1,
+            "name": "Disgust",
+            "support": 56,
+            "precision": 0.5957446808510638,
+            "recall": 0.5,
+            "f1": 0.5436893203883495
+          },
+          {
+            "label": 2,
+            "name": "Fear",
+            "support": 496,
+            "precision": 0.5698447893569845,
+            "recall": 0.5181451612903226,
+            "f1": 0.5427666314677931
+          },
+          {
+            "label": 3,
+            "name": "Happy",
+            "support": 895,
+            "precision": 0.8830275229357798,
+            "recall": 0.8603351955307262,
+            "f1": 0.8715336728919072
+          },
+          {
+            "label": 4,
+            "name": "Sad",
+            "support": 653,
+            "precision": 0.5617647058823529,
+            "recall": 0.5849923430321593,
+            "f1": 0.5731432858214555
+          },
+          {
+            "label": 5,
+            "name": "Surprise",
+            "support": 415,
+            "precision": 0.8060747663551402,
+            "recall": 0.8313253012048193,
+            "f1": 0.8185053380782918
+          },
+          {
+            "label": 6,
+            "name": "Neutral",
+            "support": 607,
+            "precision": 0.6116504854368932,
+            "recall": 0.6227347611202636,
+            "f1": 0.6171428571428571
+          }
+        ],
+        "confusion_matrix": [
+          [
+            295,
+            6,
+            39,
+            11,
+            59,
+            13,
+            44
+          ],
+          [
+            18,
+            28,
+            5,
+            0,
+            5,
+            0,
+            0
+          ],
+          [
+            46,
+            3,
+            257,
+            11,
+            98,
+            34,
+            47
+          ],
+          [
+            17,
+            0,
+            13,
+            770,
+            24,
+            18,
+            53
+          ],
+          [
+            70,
+            7,
+            77,
+            22,
+            382,
+            8,
+            87
+          ],
+          [
+            10,
+            0,
+            31,
+            12,
+            8,
+            345,
+            9
+          ],
+          [
+            37,
+            3,
+            29,
+            46,
+            104,
+            10,
+            378
+          ]
+        ],
+        "loss": 0.9930327161170872,
+        "objective": 0.993032716083872
+      },
+      "best_checkpoint": "checkpoints/t35_c_photo_smooth_ema_s43/best.pt",
+      "checkpoint_sha256": "90c7c82065a21fc1bda71e3294d32caea7ced7b2f2d1656b9e3672fc636d8a6f",
+      "reload_verified": true
+    }
+  },
+  "epochs_completed": 18,
+  "elapsed_seconds": 526.343940334,
+  "private_test_used": false,
+  "canonical_stream": "ema"
+}

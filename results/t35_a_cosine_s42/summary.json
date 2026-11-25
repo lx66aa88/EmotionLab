@@ -1,0 +1,146 @@
+{
+  "name": "t35_a_cosine_s42",
+  "streams": {
+    "online": {
+      "best_local_epoch": 3,
+      "best_validation": {
+        "accuracy": 0.6834772917247144,
+        "correct": 2453,
+        "samples": 3589,
+        "macro_f1": 0.6574485530285015,
+        "per_class": [
+          {
+            "label": 0,
+            "name": "Angry",
+            "support": 467,
+            "precision": 0.5654545454545454,
+            "recall": 0.6659528907922913,
+            "f1": 0.6116027531956736
+          },
+          {
+            "label": 1,
+            "name": "Disgust",
+            "support": 56,
+            "precision": 0.6,
+            "recall": 0.5357142857142857,
+            "f1": 0.5660377358490566
+          },
+          {
+            "label": 2,
+            "name": "Fear",
+            "support": 496,
+            "precision": 0.5995203836930456,
+            "recall": 0.5040322580645161,
+            "f1": 0.547645125958379
+          },
+          {
+            "label": 3,
+            "name": "Happy",
+            "support": 895,
+            "precision": 0.8871915393654524,
+            "recall": 0.8435754189944135,
+            "f1": 0.8648339060710196
+          },
+          {
+            "label": 4,
+            "name": "Sad",
+            "support": 653,
+            "precision": 0.5651515151515152,
+            "recall": 0.5712098009188361,
+            "f1": 0.5681645087585682
+          },
+          {
+            "label": 5,
+            "name": "Surprise",
+            "support": 415,
+            "precision": 0.7949886104783599,
+            "recall": 0.8409638554216867,
+            "f1": 0.8173302107728337
+          },
+          {
+            "label": 6,
+            "name": "Neutral",
+            "support": 607,
+            "precision": 0.6189710610932476,
+            "recall": 0.6342668863261944,
+            "f1": 0.6265256305939789
+          }
+        ],
+        "confusion_matrix": [
+          [
+            311,
+            7,
+            34,
+            12,
+            55,
+            12,
+            36
+          ],
+          [
+            17,
+            30,
+            3,
+            0,
+            6,
+            0,
+            0
+          ],
+          [
+            50,
+            4,
+            250,
+            9,
+            93,
+            41,
+            49
+          ],
+          [
+            19,
+            1,
+            13,
+            755,
+            28,
+            23,
+            56
+          ],
+          [
+            89,
+            5,
+            69,
+            22,
+            373,
+            7,
+            88
+          ],
+          [
+            13,
+            0,
+            25,
+            11,
+            9,
+            349,
+            8
+          ],
+          [
+            51,
+            3,
+            23,
+            42,
+            96,
+            7,
+            385
+          ]
+        ],
+        "loss": 1.0872269933620313,
+        "objective": 1.087226993378639
+      },
+      "best_checkpoint": "checkpoints/t35_a_cosine_s42/best.pt",
+      "checkpoint_sha256": "42c3d37a58f4fa5f32ad3fdbaf52c20805e8eed7386346ef59ae6ca1bc633028",
+      "reload_verified": true
+    }
+  },
+  "epochs_completed": 18,
+  "elapsed_seconds": 357.134110292,
+  "private_test_used": false,
+  "canonical_stream": "online"
+}

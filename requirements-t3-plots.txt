@@ -1,0 +1,2 @@
+# Optional plotting dependency; core T3 training still uses torch/numpy only.
+matplotlib==3.9.4

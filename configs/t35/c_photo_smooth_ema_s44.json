@@ -1,0 +1,18 @@
+{
+  "csv_path": "data/icml_face_data_副本.csv",
+  "model": "resnet18_w16",
+  "initialize_from": "checkpoints/t3_05_resnet_aug_mps_s42/best.pt",
+  "epochs": 18,
+  "learning_rate": 0.00015,
+  "min_lr": 5e-06,
+  "weight_decay": 0.0001,
+  "batch_size": 256,
+  "threads": 4,
+  "device": "mps",
+  "seed": 44,
+  "label_smoothing": 0.05,
+  "ema": true,
+  "ema_decay": 0.995,
+  "photometric": true,
+  "name": "t35_c_photo_smooth_ema_s44"
+}

@@ -1,0 +1,165 @@
+{
+  "config": {
+    "name": "t37_w16_s101",
+    "width": 16,
+    "seed": 101,
+    "device": "cpu",
+    "threads": 4,
+    "csv_path": "data/icml_face_data_副本.csv",
+    "epochs": 100,
+    "batch_size": 128,
+    "optimizer": "SGD",
+    "momentum": 0.9,
+    "nesterov": true,
+    "weight_decay": 0.0005,
+    "lr_start": 0.005,
+    "lr_peak": 0.05,
+    "lr_min": 1e-05,
+    "warmup_epochs": 5,
+    "scheduler": "epoch start: epochs1..5 linear endpoints; epochs6..100 cosine endpoints",
+    "dropout": 0.3,
+    "initialization": "Kaiming normal fan_out relu Conv/Linear; bias0; BN1/0",
+    "augmentation": "flip p0.5; reflected translation +-4px",
+    "loss": "ordinary CE",
+    "selection": "Public accuracy; ties lower CE; ties earlier epoch",
+    "ema": false,
+    "label_smoothing": 0,
+    "class_weight": null
+  },
+  "best_epoch": 97,
+  "best_validation": {
+    "accuracy": 0.6851490665923655,
+    "correct": 2459,
+    "samples": 3589,
+    "macro_f1": 0.6797505665574974,
+    "per_class": [
+      {
+        "label": 0,
+        "name": "Angry",
+        "support": 467,
+        "precision": 0.5934489402697495,
+        "recall": 0.6595289079229122,
+        "f1": 0.6247464503042596
+      },
+      {
+        "label": 1,
+        "name": "Disgust",
+        "support": 56,
+        "precision": 0.8222222222222222,
+        "recall": 0.6607142857142857,
+        "f1": 0.7326732673267325
+      },
+      {
+        "label": 2,
+        "name": "Fear",
+        "support": 496,
+        "precision": 0.5588865096359743,
+        "recall": 0.5262096774193549,
+        "f1": 0.5420560747663552
+      },
+      {
+        "label": 3,
+        "name": "Happy",
+        "support": 895,
+        "precision": 0.8700564971751412,
+        "recall": 0.8603351955307262,
+        "f1": 0.8651685393258427
+      },
+      {
+        "label": 4,
+        "name": "Sad",
+        "support": 653,
+        "precision": 0.5873015873015873,
+        "recall": 0.5666156202143952,
+        "f1": 0.5767731878409977
+      },
+      {
+        "label": 5,
+        "name": "Surprise",
+        "support": 415,
+        "precision": 0.7939110070257611,
+        "recall": 0.8168674698795181,
+        "f1": 0.8052256532066508
+      },
+      {
+        "label": 6,
+        "name": "Neutral",
+        "support": 607,
+        "precision": 0.6071428571428571,
+        "recall": 0.6161449752883031,
+        "f1": 0.6116107931316436
+      }
+    ],
+    "confusion_matrix": [
+      [
+        308,
+        5,
+        51,
+        15,
+        44,
+        9,
+        35
+      ],
+      [
+        9,
+        37,
+        0,
+        1,
+        9,
+        0,
+        0
+      ],
+      [
+        50,
+        2,
+        261,
+        10,
+        87,
+        33,
+        53
+      ],
+      [
+        23,
+        1,
+        9,
+        770,
+        20,
+        20,
+        52
+      ],
+      [
+        68,
+        0,
+        82,
+        26,
+        370,
+        16,
+        91
+      ],
+      [
+        11,
+        0,
+        33,
+        12,
+        9,
+        339,
+        11
+      ],
+      [
+        50,
+        0,
+        31,
+        51,
+        91,
+        10,
+        374
+      ]
+    ],
+    "loss": 1.2765962565699205,
+    "ece_15_bins": 0.17856001838580965
+  },
+  "checkpoint": "checkpoints/t37_w16_s101/best.pt",
+  "sha256": "f4f4eb804aa5d012d5ad14c52dd5060bb5ca7438c88ac42259442b1c1dc70cfd",
+  "epochs_completed": 100,
+  "private_test_used": false
+}

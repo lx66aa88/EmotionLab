@@ -1,0 +1,21 @@
+{
+  "best_epoch": 15,
+  "best_validation": {
+    "loss": 1.2367202287664916,
+    "accuracy": 0.5424909445528002,
+    "correct": 1947,
+    "samples": 3589
+  },
+  "reloaded_validation": {
+    "loss": 1.2367202287664916,
+    "accuracy": 0.5424909445528002,
+    "correct": 1947,
+    "samples": 3589
+  },
+  "reload_verified": true,
+  "best_checkpoint": "checkpoints/t2_baseline_20261030/best.pt",
+  "checkpoint_sha256": "cbd1a9bf5b3b653246154e4ffa896fde0934ca2d34f0fdb1f2012d662ace169b",
+  "elapsed_seconds": 316.62555237500004,
+  "epochs_completed": 15,
+  "private_test_used": false
+}

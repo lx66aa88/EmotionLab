@@ -1,0 +1,52 @@
+# Local execution and operating system artifacts
+.DS_Store
+._*
+*.icloud
+.venv/
+venv/
+.t51-deps/
+.t52-deps/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+dist/
+dist-*/
+.vite/
+coverage/
+*.log
+.tmp/
+tmp/
+# Local input, weights and native build products
+/data/
+/checkpoints/
+/bin/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+!/models/face_detection_yunet/face_detection_yunet_2023mar.onnx
+*.npz
+*.npy
+*.csv
+!/results/t4_step2_analysis_20261104/data/*.csv
+# Credentials, raw footage and internal class material
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.mov
+*.mp4
+*.m4a
+*.wav
+/00_期末答辩与四人分工资料/
+/01_最终项目完整档案/
+/recording_analysis/
+/smoke-48.png
+# The institution-specific evaluator and its approval/ACL tooling stay local.
+/scripts/t921_guard.py
+/src/t91_evaluate.py
+/tests/test_t91_evaluate.py
+/tests/test_t921_guard.py

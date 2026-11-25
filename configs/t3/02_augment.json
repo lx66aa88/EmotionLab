@@ -1,0 +1,16 @@
+{
+  "name": "t3_02_augment_s42",
+  "csv_path": "data/icml_face_data_\u526f\u672c.csv",
+  "model": "basic",
+  "initialize_from": "checkpoints/t2_baseline_20261030/best.pt",
+  "start_epoch": 15,
+  "max_epoch": 45,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "batch_size": 128,
+  "seed": 42,
+  "threads": 4,
+  "augmentation": true,
+  "lr_patience": 3,
+  "early_stopping": 10
+}

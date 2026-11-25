@@ -1,0 +1,8 @@
+﻿comparison,baseline,candidate,changed,corrected,damaged,both_wrong_changed,net_correct_gain,accuracy_delta_pp
+w32原图 → w32 TTA,w32_raw,w32_tta,293,113,93,87,20,0.5572582892170521
+T3原图 → T3 TTA,t3_raw,t3_tta,396,157,123,116,34,0.9473390916689886
+w16原图 → w16 TTA,w16_raw,w16_tta,391,155,112,124,43,1.198105321816662
+w32原图 → 双模型原图,w32_raw,double_raw,260,118,61,81,57,1.5881861242685984
+双模型原图 → 双模型TTA,double_raw,double_tta,275,104,86,85,18,0.5015324602953469
+双模型TTA → 三模型TTA,double_tta,triple_tta,202,86,66,50,20,0.5572582892170521
+三模型TTA → 额外四视图,triple_tta,fourview,130,46,55,29,-9,-0.25076623014767346

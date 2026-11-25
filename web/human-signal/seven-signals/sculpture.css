@@ -1,0 +1,61 @@
+.ss-sculpture { position: relative; min-inline-size: 0; }
+.ss-stack { display: grid; inline-size: 100%; aspect-ratio: 560 / 416; }
+.ss-layer { grid-area: 1 / 1; min-inline-size: 0; transform-origin: center; }
+.ss-surface, .ss-silhouette { display: block; inline-size: 100%; block-size: 100%; overflow: visible; }
+.ss-confidence { margin: .5em 0 0; font: inherit; }
+.ss-ribbon {
+  --ss-rest: translate(0px, 0px) rotate(0deg) scale(1, 1);
+  transform-box: view-box;
+  animation: var(--ss-profile) var(--ss-duration) ease-in-out var(--ss-delay) infinite both;
+}
+.ss-sculpture[data-mode="paused"] .ss-ribbon,
+.ss-layer[data-leaving="true"] .ss-ribbon { animation-play-state: paused; }
+.ss-sculpture[data-mode="static"] .ss-ribbon { animation: none; }
+
+@keyframes ss-fault {
+  0%, 18%, 88%, 100% { transform: var(--ss-rest); }
+  39% { transform: var(--ss-first); }
+  49% { transform: var(--ss-peak); }
+  68% { transform: var(--ss-last); }
+}
+@keyframes ss-recoil {
+  0%, 100% { transform: var(--ss-rest); }
+  25% { transform: var(--ss-first); }
+  60% { transform: var(--ss-peak); }
+  86% { transform: var(--ss-last); }
+}
+@keyframes ss-filament {
+  0%, 100% { transform: var(--ss-rest); }
+  22% { transform: var(--ss-first); }
+  43% { transform: var(--ss-peak); }
+  63% { transform: var(--ss-last); }
+  82% { transform: var(--ss-first); }
+}
+@keyframes ss-bloom {
+  0%, 100% { transform: var(--ss-rest); }
+  24% { transform: var(--ss-first); }
+  44%, 49% { transform: var(--ss-peak); }
+  83% { transform: var(--ss-last); }
+}
+@keyframes ss-fall {
+  0%, 100% { transform: var(--ss-rest); }
+  33% { transform: var(--ss-first); }
+  63% { transform: var(--ss-peak); }
+  86% { transform: var(--ss-last); }
+}
+@keyframes ss-burst {
+  0%, 16%, 88%, 100% { transform: var(--ss-rest); }
+  33% { transform: var(--ss-first); }
+  41% { transform: var(--ss-peak); }
+  60% { transform: var(--ss-last); }
+}
+@keyframes ss-plane {
+  0%, 100% { transform: var(--ss-rest); }
+  24% { transform: var(--ss-first); }
+  50% { transform: var(--ss-peak); }
+  78% { transform: var(--ss-last); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ss-ribbon { animation: none; }
+}

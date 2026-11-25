@@ -1,0 +1,15 @@
+{
+  "csv_path": "data/icml_face_data_\u526f\u672c.csv",
+  "max_epoch": 50,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "batch_size": 256,
+  "seed": 42,
+  "threads": 4,
+  "device": "mps",
+  "augmentation": true,
+  "lr_patience": 4,
+  "early_stopping": 12,
+  "name": "t3_05_resnet_aug_mps_s42",
+  "model": "resnet18_w16"
+}

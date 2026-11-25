@@ -1,0 +1,16 @@
+{
+  "name": "t3_01_continue_s42",
+  "csv_path": "data/icml_face_data_副本.csv",
+  "model": "basic",
+  "initialize_from": "checkpoints/t2_baseline_20261030/best.pt",
+  "start_epoch": 15,
+  "max_epoch": 45,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "batch_size": 128,
+  "seed": 42,
+  "threads": 4,
+  "augmentation": false,
+  "lr_patience": 3,
+  "early_stopping": 10
+}

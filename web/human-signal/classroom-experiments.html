@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/mark.svg" type="image/svg+xml">
+  <title>EmotionLab · 课堂实验图表</title>
+  <style>
+    body{margin:0;background:#131517;color:#f1f3f4;font:16px/1.65 system-ui,sans-serif}
+    main{max-width:84rem;margin:auto;padding:clamp(1rem,4vw,3rem)}
+    a{color:#b5ff78} a:focus-visible{outline:2px solid #b5ff78;outline-offset:4px}
+    h1{font-size:clamp(1.7rem,4vw,2.7rem);line-height:1.2;margin:.75em 0 .35em}
+    h2{font-size:1.2rem;margin:0 0 .65rem} p{max-width:52rem;margin:.35em 0 1.3em}
+    .charts{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,32rem),1fr))}
+    article{padding:clamp(.65rem,2vw,1.25rem);background:#1e2224;border:1px solid #3d4548;border-radius:.5rem}
+    img{width:100%;height:auto;display:block;background:white;color:#111}
+  </style>
+</head>
+<body>
+<main>
+  <a href="/">← 返回 HUMAN SIGNAL 观测台</a>
+  <h1>课堂实验图表</h1>
+  <p>图表来自已保存的 T4.2 实验分析。PublicTest 历史验证为 2606／3589（72.610755%），现场打开此页不会重新训练或评估。点击图表可查看原图。</p>
+  <div class="charts">
+    <article><h2>训练 Loss</h2><a href="./train_loss_ce.png"><img src="./train_loss_ce.png" alt="历史训练交叉熵曲线"></a></article>
+    <article><h2>训练 Accuracy</h2><a href="./train_accuracy.png"><img src="./train_accuracy.png" alt="历史训练准确率曲线"></a></article>
+    <article><h2>模型对比</h2><a href="./model_accuracy_f1.png"><img src="./model_accuracy_f1.png" alt="历史 PublicTest 模型准确率与 Macro F1 对比"></a></article>
+    <article><h2>混淆矩阵</h2><a href="./confusion_counts.png"><img src="./confusion_counts.png" alt="历史 PublicTest 混淆矩阵，显示预测计数"></a></article>
+  </div>
+</main>
+</body>
+</html>

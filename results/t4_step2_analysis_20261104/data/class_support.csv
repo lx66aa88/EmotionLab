@@ -1,0 +1,8 @@
+﻿label,class,training,public
+0,Angry,3995,467
+1,Disgust,436,56
+2,Fear,4097,496
+3,Happy,7215,895
+4,Sad,4830,653
+5,Surprise,3171,415
+6,Neutral,4965,607

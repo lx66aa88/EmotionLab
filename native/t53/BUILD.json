@@ -1,0 +1,15 @@
+{
+  "version": "t53-imageio-v1",
+  "binary_sha256": "311954736dde91fb83d835d73818e7c5067ffdabe5bf627bcec0f21e5f01be71",
+  "source_sha256": "3e8e65d51d29d715de6ff0ab0bbab8b44a589f29e9926559aff100aeb59956da",
+  "build_command": "xcrun swiftc -O -target arm64-apple-macosx13.0 native/t53/PhotoDecoder.swift -o bin/t53/photo-decoder",
+  "compiler": "Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.0.0\n",
+  "tested_system": "ProductName:\t\tmacOS\nProductVersion:\t\t27.0.1\nBuildVersion:\t\t26A434\n",
+  "dependencies": [
+    "macOS Foundation",
+    "macOS ImageIO",
+    "macOS CoreGraphics",
+    "macOS sandbox-exec"
+  ],
+  "third_party_packages_added": []
+}

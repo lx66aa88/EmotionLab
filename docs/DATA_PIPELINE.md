@@ -1,0 +1,9 @@
+# Data pipeline
+
+[`EmotionDataset`](../src/dataset.py) reads `emotion,pixels,Usage`. A record holds 2,304 space-separated integers in row-major order. The seven labels 0–6 are Angry, Disgust, Fear, Happy, Sad, Surprise and Neutral. Values from 0–255 become float32 via division by 255. Batches are `[N,1,48,48]`.
+
+Training updates use Training rows. PublicTest is the fixed validation split, without stochastic augmentation. Historical configs document the original mixed-file path and launch conditions. Use an independently authorized Training/PublicTest-only export prepared by the data steward for exploratory work, with split membership preserved. Course holdout operation stays in the classroom environment under its own procedure. The [official challenge data page](https://www.kaggle.com/competitions/challenges-in-representation-learning-facial-expression-recognition-challenge/data) and the course distribution are access routes subject to their terms. Other FER dataset packages may differ in order, labels or splits. The archive CLI and web demo require no CSV.
+
+A historical audit of the allowed splits found 1,236 extra duplicate Training rows and 26 extra PublicTest rows. Across those two splits, 270 exact-pixel groups involved 280 PublicTest images. Thirteen shared groups contained inconsistent labels. Historical results use the original splits. See [limitations](LIMITATIONS.md).
+
+For product input, [`t52_faces.py`](../src/t52_faces.py) bounds and orients decode, finds faces with YuNet, and pads and squares the selected crop before grayscale conversion. [`t54_live.py`](../src/t54_live.py) adds last-box/point selection and status for no face, multiple faces, low quality or lost target. [`ensemble.preprocess_pixels`](../src/ensemble.py) owns normalization. The [synthetic image](../examples/README.md) checks CLI transport.
