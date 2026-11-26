@@ -1,6 +1,6 @@
 # HUMAN SIGNAL product design
 
-HUMAN SIGNAL means a visible signal from a classifier. The interface relates the source image, model input, seven scores, and visual interpretation so the viewer can follow how the signal was produced. Graphite and warm-white themes distinguish an observation workspace from the sculpture stage. Small status accents, including the brand's vivid green, mark active controls. Archivo carries the display hierarchy and IBM Plex Mono is used for timings, scores and technical labels. [Styles](../web/human-signal/src/) · [Credits](REFERENCES.md)
+HUMAN SIGNAL means a visible signal from a classifier. The interface relates the source image, model input, seven scores, and visual interpretation so the viewer can follow how the signal was produced. Graphite and warm-white themes distinguish an observation workspace from the sculpture stage. Small status accents, including the brand's vivid green, mark active controls. Archivo carries the display hierarchy and IBM Plex Mono is used for timings, scores and technical labels. [Styles](../frontend/src/) · [Credits](REFERENCES.md)
 
 | Mode | User flow | Design decision |
 | --- | --- | --- |
@@ -10,4 +10,4 @@ HUMAN SIGNAL means a visible signal from a classifier. The interface relates the
 | Seven Signals | Observe material and shape connected to the current class; use the standalone gallery to select any label | Artistic interpretation is explicit and optional |
 | Expression Challenge | Enter on demand, start, receive a target, find a stable match, review round and final summaries | Show game target separately from detected raw evidence; preserve access to stop, pause, retry and restart |
 
-[`AppT72.jsx`](../web/human-signal/src/AppT72.jsx) composes the release. [`PhotoStudy53.jsx`](../web/human-signal/src/components/PhotoStudy53.jsx), [`LiveStudy.jsx`](../web/human-signal/src/components/LiveStudy.jsx) and [`FrozenFrame.jsx`](../web/human-signal/src/components/FrozenFrame.jsx) give each state a distinct presentation. The production app stays on loopback and the photo/camera transient media are handled in memory by their intended paths. For media context and caption provenance see [gallery](PRODUCT_GALLERY.md).
+[`AppT72.jsx`](../frontend/src/App.jsx) composes the release. [`PhotoStudy53.jsx`](../frontend/src/photo/PhotoStudy.jsx), [`LiveStudy.jsx`](../frontend/src/live/LivePage.jsx) and [`FrozenFrame.jsx`](../frontend/src/live/FrozenFrame.jsx) give each state a distinct presentation. The production app stays on loopback and the photo/camera transient media are handled in memory by their intended paths. For media context and caption provenance see [gallery](PRODUCT_GALLERY.md).

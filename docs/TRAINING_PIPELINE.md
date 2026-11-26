@@ -23,4 +23,4 @@ flowchart LR
 
 Eval mode fixes BN state and disables dropout. Online training metrics integrate changing weights and configured augmentation. PublicTest metrics measure the end-of-epoch state. The historical fixed Training-versus-PublicTest check evaluated the same weights on both splits.
 
-[Baseline trainer](../src/train.py) · [T3](../src/t3_train.py) · [T3.5](../src/t35_train.py) · [T3.7](../src/t37_train.py) · [Configs](../configs/) · [Run ledger](../experiments/README.md)
+[Baseline trainer](../training/baseline.py) · [T3](../training/cnn_experiment.py) · [T3.5](../training/ema_finetune.py) · [T3.7](../training/resnet_experiment.py) · [Configs](../configs/) · [Run ledger](../experiments/README.md)

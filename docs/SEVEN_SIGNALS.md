@@ -1,6 +1,6 @@
 # Seven Signals
 
-Seven pieces turn the fixed class index into a ribbon sculpture. [`signals.js`](../web/human-signal/seven-signals/signals.js) owns index, material palette, named form, timing, geometry construction and the Chinese visual note. [`geometry.js`](../web/human-signal/seven-signals/geometry.js) turns centerline/width control points into ribbon surfaces. [`SignalSculpture.jsx`](../web/human-signal/seven-signals/SignalSculpture.jsx) layers SVG paths, metallic gradients, and motion. Abstract forms are artistic associations with the classifier labels.
+Seven pieces turn the fixed class index into a ribbon sculpture. [`signals.js`](../frontend/seven-signals/signals.js) owns index, material palette, named form, timing, geometry construction and the Chinese visual note. [`geometry.js`](../frontend/seven-signals/geometry.js) turns centerline/width control points into ribbon surfaces. [`SignalSculpture.jsx`](../frontend/seven-signals/SignalSculpture.jsx) layers SVG paths, metallic gradients, and motion. Abstract forms are artistic associations with the classifier labels.
 
 | Index and category | Piece | Shape and motion |
 | --- | --- | --- |
@@ -12,4 +12,4 @@ Seven pieces turn the fixed class index into a ribbon sculpture. [`signals.js`](
 | 5 Surprise | Burst / 迸开 | Pointed forms expand quickly around a hollow center and fall back with gaps |
 | 6 Neutral | Plane / 基面 | Layered horizontal loops retain composure while spacing shifts slightly |
 
-The standalone [preview](../web/human-signal/seven-signals/Preview.jsx) lets users select labels with arrows, Home and End. It ships without backend, model, camera or dataset access. Reduced motion and still display controls are provided. In the product, [`SevenSignals.jsx`](../web/human-signal/src/components/SevenSignals.jsx) maps PHOTO, LIVE or frozen outcomes to the same library and adapts visual transitions to the observation state. T6.3 documented interaction, editorial and motion references in [credits](REFERENCES.md). [Gallery](PRODUCT_GALLERY.md) · [Run the standalone gallery](GETTING_STARTED.md).
+The standalone [preview](../frontend/seven-signals/Preview.jsx) lets users select labels with arrows, Home and End. It ships without backend, model, camera or dataset access. Reduced motion and still display controls are provided. In the product, [`SevenSignals.jsx`](../frontend/src/components/SevenSignals.jsx) maps PHOTO, LIVE or frozen outcomes to the same library and adapts visual transitions to the observation state. T6.3 documented interaction, editorial and motion references in [credits](REFERENCES.md). [Gallery](PRODUCT_GALLERY.md) · [Run the standalone gallery](GETTING_STARTED.md).

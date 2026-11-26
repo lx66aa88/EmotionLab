@@ -1,0 +1,31 @@
+@import "./photo-base.css";
+/* Keep progress and controls readable at genuine 320px CSS width. */
+@media (max-width: 390px) {
+  .instrument-bottom {
+    flex-wrap: wrap;
+  }
+  .live-status {
+    white-space: normal;
+    line-height: 1.7;
+  }
+  .input-modes {
+    gap: 18px;
+  }
+  .primary-button {
+    gap: 18px;
+    max-width: 100%;
+  }
+  .photo-caption {
+    flex-wrap: wrap;
+  }
+  .photo-viewport {
+    padding-left: 25px;
+    padding-right: 18px;
+  }
+  .crop-record dd {
+    overflow-wrap: anywhere;
+  }
+  .method-data {
+    min-width: 0;
+  }
+}

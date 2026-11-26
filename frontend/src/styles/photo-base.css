@@ -1,0 +1,309 @@
+/* T5.2: photographic contact sheet within the original instrument, no card dashboard. */
+.photo-preparation {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-left: 2px solid var(--signal);
+  padding-left: 12px;
+  margin: 14px 0;
+  font-size: 11px;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+.photo-preparation strong {
+  color: var(--signal);
+  font-weight: 500;
+}
+.photo-preparation > span {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.input-modes {
+  display: flex;
+  gap: 22px;
+  border-bottom: 1px solid var(--line);
+  margin-top: 26px;
+  max-width: 390px;
+}
+.input-modes button {
+  background: none;
+  min-height: 46px;
+  padding: 9px 0;
+  font-size: 12px;
+  color: var(--muted);
+  border-bottom: 2px solid transparent;
+  text-align: left;
+}
+.input-modes button.selected {
+  color: var(--text);
+  border-color: var(--signal);
+}
+.input-modes .mono {
+  font-size: 8px;
+  margin-left: 8px;
+  color: var(--dim);
+}
+.input-modes + .primary-controls {
+  margin-top: 20px;
+}
+.photo-notice {
+  font-size: 11px;
+  color: var(--signal);
+  line-height: 1.8;
+  margin-top: 8px;
+}
+.photo-actions {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-top: 9px;
+}
+.photo-actions .text-button {
+  font-size: 11px;
+  min-height: 36px;
+}
+.photo-viewport {
+  padding: 38px 32px;
+  min-height: 360px;
+}
+.photo-window {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  max-height: 550px;
+  min-width: 0;
+  overflow: hidden;
+  line-height: 0;
+  align-self: center;
+}
+.photo-window > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.face-box {
+  position: absolute;
+  background: transparent;
+  border: 1px solid #f0eee8;
+  min-width: 0;
+  padding: 0;
+  box-shadow: 0 0 0 1px #111;
+  transition: border-color 120ms;
+  z-index: 2;
+}
+.face-box.chosen {
+  border: 2px solid #b5ff78;
+  box-shadow: 0 0 0 1px #111;
+}
+.face-box > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 5px 7px;
+  background: #111316;
+  color: #f0eee8;
+  font-size: 11px;
+  line-height: 1;
+}
+.face-box.chosen > span {
+  background: #b5ff78;
+  color: #111b0c;
+}
+.face-box:disabled {
+  opacity: 1;
+}
+.crop-outline {
+  position: absolute;
+  border: 1px dashed #b5ff78;
+  pointer-events: none;
+  z-index: 1;
+}
+.photo-rail {
+  list-style: none;
+  padding: 16px 0;
+  margin: 21px 0 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  gap: 12px;
+}
+.photo-rail li {
+  font-size: 10px;
+  display: flex;
+  gap: 10px;
+  color: var(--dim);
+}
+.photo-rail li > span:last-child {
+  font-family: Archivo, "PingFang SC", sans-serif;
+}
+.photo-rail li.current {
+  color: var(--signal);
+}
+.photo-rail li.complete {
+  color: var(--text);
+}
+.photo-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  font-size: 12px;
+}
+.photo-caption strong {
+  font-weight: 450;
+}
+.photo-caption .mono {
+  font-size: 9px;
+  color: var(--muted);
+}
+.photo-note {
+  font-size: 11px;
+  line-height: 1.85;
+  color: var(--muted);
+  margin: 12px 0;
+}
+.face-candidates {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 18px 0;
+}
+.face-candidate {
+  background: none;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 7px 10px;
+  text-align: left;
+  min-width: 126px;
+  max-width: 170px;
+  flex: 1;
+}
+.face-candidate img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  grid-row: span 2;
+}
+.face-candidate.selected {
+  border-color: var(--signal);
+}
+.candidate-number {
+  font-size: 12px;
+  align-self: center;
+}
+.selected .candidate-number {
+  color: var(--signal);
+}
+.detection-score {
+  font-size: 9px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.crop-study {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+.crop-record {
+  font-size: 9px;
+  margin: 10px 0;
+}
+.crop-record > div {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding: 9px 0;
+  gap: 12px;
+  line-height: 1.6;
+}
+.crop-record dt {
+  color: var(--muted);
+  font-family: Archivo, "PingFang SC", sans-serif;
+}
+.crop-record dd {
+  margin: 0;
+  text-align: right;
+}
+.photo-boundary {
+  border-left: 2px solid var(--signal);
+  padding-left: 12px;
+  margin-top: 20px;
+  font-size: 10px;
+}
+.photo-source {
+  font-size: 12px;
+  line-height: 1.8;
+  margin-top: 17px;
+  color: var(--text);
+}
+.photo-source span {
+  font-size: 10px;
+  color: var(--signal);
+}
+.error-box button + button {
+  display: block;
+  margin-top: 5px;
+}
+.photo-window:has(img) {
+  max-height: none;
+}
+@media (max-width: 760px) {
+  .input-modes {
+    max-width: none;
+    margin-top: 22px;
+    gap: 25px;
+  }
+  .input-modes button {
+    font-size: 12px;
+  }
+  .photo-viewport {
+    min-height: 240px;
+    max-height: none;
+    padding: 34px 25px;
+  }
+  .photo-window {
+    max-height: none;
+  }
+  .photo-rail {
+    gap: 8px;
+    padding-top: 13px;
+    margin-top: 20px;
+  }
+  .photo-rail li {
+    font-size: 8px;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .photo-rail li > span:last-child {
+    font-size: 10px;
+  }
+  .face-candidates {
+    gap: 12px;
+  }
+  .face-candidate {
+    max-width: 180px;
+  }
+  .photo-note {
+    font-size: 11px;
+  }
+  .face-box > span {
+    font-size: 10px;
+    padding: 4px;
+  }
+  .photo-source {
+    font-size: 11px;
+  }
+  .input-modes .mono {
+    font-size: 8px;
+  }
+  .crop-record > div {
+    font-size: 9px;
+  }
+  .photo-caption .mono {
+    font-size: 8px;
+  }
+}

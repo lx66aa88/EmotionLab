@@ -50,3 +50,9 @@ tmp/
 /src/t91_evaluate.py
 /tests/test_t91_evaluate.py
 /tests/test_t921_guard.py
+
+# Machine-local classroom resources
+/.runtime/
+/results/t4_step3_inference_20261104/examples/
+/本机材料/
+/tests/local_fixtures/

@@ -9,10 +9,8 @@ The pinned target verified for this archive is macOS 27.0.1 arm64, CPython 3.9.6
 The gallery is one way to explore a freshly cloned archive before obtaining classifier files.
 
 ```sh
-cd web/human-signal
 npm ci
-npm exec -- vite build --config seven-signals/vite.config.js
-npm exec -- vite preview --config seven-signals/vite.config.js
+npm run gallery -- --port 8786
 ```
 
 Open `http://127.0.0.1:8786/`. Use the class chooser and motion controls.
@@ -25,7 +23,7 @@ Install within a new virtual environment from the repository root.
 python3.9 -m venv .venv
 . .venv/bin/activate
 python -m pip install -r requirements-web.txt
-python -m src.classroom results
+python -m evaluation.cli results
 ```
 
 The last command verifies the historical summary and prints PublicTest data from disk. It needs no checkpoint. Use `requirements-inference.txt` for the classifier CLI only. `requirements.txt` preserves the original minimal training record.
@@ -43,9 +41,9 @@ The included YuNet ONNX is a separate face locator. Its provenance and MIT notic
 ### Image CLI
 
 ```sh
-python -m src.classroom check
+python -m evaluation.cli check
 python examples/make_smoke_image.py smoke-48.png
-python -m src.classroom predict --image smoke-48.png
+python -m evaluation.cli predict --image smoke-48.png
 ```
 
 The smoke file is an original synthetic grayscale pattern. It has no ground truth. A real CLI prediction needs an authorized, already cropped 48 × 48 L-mode image or a compatible 48 × 48 NumPy array.
@@ -55,17 +53,18 @@ The smoke file is an original synthetic grayscale pattern. It has no ground trut
 From the root, with the venv active and the authorized checkpoints installed:
 
 ```sh
-(cd web/human-signal && npm ci && npm exec -- vite build --config vite.t72.config.js)
-python -m src.t62_web --port 8797 --dist web/human-signal/dist-t72 --classroom-experiments
+npm ci
+npm run build
+python -m backend.server --port 8797
 ```
 
-Open `http://127.0.0.1:8797/`. The experiments page is `http://127.0.0.1:8797/experiments/`. Upload a JPEG/PNG you have permission to process. Click the camera button in LIVE or the challenge if you want camera input. Stop the service with Ctrl+C. The classroom `start_t72.sh` and `t83_preflight.py` describe the original fixed offline packaging, with its separate dependency folders and assets. The commands above target the isolated archive with shared venv dependencies.
+Open `http://127.0.0.1:8797/`. The experiments page is `http://127.0.0.1:8797/experiments/`. Upload a JPEG/PNG you have permission to process. Click the camera button in LIVE or the challenge if you want camera input. Stop the service with Ctrl+C. The backend registers all routes before mounting the frontend assets.
 
 ## Tests and recovery
 
 ```sh
-PYTHONPATH=tests python -m unittest -v test_t1 test_t43_inference test_t52_faces
-node --test web/human-signal/tests/*.test.mjs web/human-signal/seven-signals/tests/contract.test.mjs
+python -m unittest discover -s tests -t . -v
+npm test
 ```
 
 Some frozen-checkpoint assertions skip when the files are absent. See [validation](TESTING_AND_VALIDATION.md) for the verified scope.

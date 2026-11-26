@@ -19,4 +19,4 @@ flowchart LR
 
 Each block has two 3 × 3 convolutions with BN and an intermediate ReLU. A shape-preserving path uses identity, while shape changes use a 1 × 1 projection and BN. ReLU follows the sum. The stride-1 stem keeps all spatial positions at entry. Stage transitions downsample.
 
-[Baseline code](../src/model.py) · [T3 blocks](../src/t3_models.py) · [T3.7 models](../src/t37_models.py) · [Frozen manifest](../configs/inference/best_triple.json)
+[Baseline code](../model_design/basic_cnn.py) · [T3 blocks](../model_design/cnn_variants.py) · [T3.7 models](../model_design/resnet18.py) · [Frozen manifest](../configs/inference/best_triple.json)

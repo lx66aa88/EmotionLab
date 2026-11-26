@@ -1,10 +1,10 @@
 # Testing and validation
 
-Published tests exercise data shape and split handling, CPU inference and digest failures, photo decoding/crop guards, client framing and cancellation, classifier presentation, game state and the sculpture contract. Training-component tests can use tiny temporary datasets. Follow the commands below for a strictly inference-only release check.
+Published tests exercise data shape and split handling, CPU inference and digest failures, photo decoding/crop guards, client framing and cancellation, classifier presentation, game state and the sculpture contract. Training-component tests can use tiny temporary datasets. Follow the commands below for the automated regression suite.
 
 ```sh
-PYTHONPATH=tests python -m unittest -v test_t1 test_t43_inference test_t52_faces
-node --test web/human-signal/tests/*.test.mjs web/human-signal/seven-signals/tests/contract.test.mjs
+python -m unittest discover -s tests -t . -v
+npm test
 ```
 
 | Evidence | Verified behavior | Conditions |

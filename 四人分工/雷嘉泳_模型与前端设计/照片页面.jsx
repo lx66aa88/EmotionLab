@@ -1,0 +1,1 @@
+../../frontend/src/photo/PhotoPage.jsx

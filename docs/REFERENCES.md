@@ -8,7 +8,7 @@
 | [OpenCV Zoo YuNet, pinned revision](https://github.com/opencv/opencv_zoo/tree/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/face_detection_yunet) | Separately licensed face locator. Bundled with [MIT notice](../models/face_detection_yunet/LICENSE) and [hash/source](../models/face_detection_yunet/SOURCE.json) |
 | [FastAPI](https://fastapi.tiangolo.com/), [Uvicorn](https://www.uvicorn.org/), [React](https://react.dev/), [Vite 7](https://v7.vite.dev/guide/) | Local service and web build |
 | [Apple ImageIO](https://developer.apple.com/documentation/imageio) | Platform frameworks called by the optional Swift adapter |
-| [Archivo OFL](../web/human-signal/public/fonts/Archivo-OFL.txt), [IBM Plex Mono OFL](../web/human-signal/public/fonts/IBMPlexMono-OFL.txt) | Bundled fonts and notices |
+| [Archivo OFL](../frontend/public/fonts/Archivo-OFL.txt), [IBM Plex Mono OFL](../frontend/public/fonts/IBMPlexMono-OFL.txt) | Bundled fonts and notices |
 | [Rauno Freiberg](https://rauno.me/craft/interaction-design), [Bureau Borsche](https://bureauborsche.com/info/about), [FutureDeluxe](https://futuredeluxe.com/research-2) | T6.3 references for responsive interaction, editorial layout and motion art |
 
 Course notice, classroom media and team materials are held in the classroom archive. Project-wide source and portfolio asset licensing awaits team approval.

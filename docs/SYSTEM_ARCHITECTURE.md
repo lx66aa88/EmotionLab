@@ -18,7 +18,7 @@ Coursework begins with cropped grayscale faces. Product input adapters also hand
 
 ```mermaid
 flowchart TD
-  R["React AppT72"] --> P["PhotoStudy53"]
+  R["React App"] --> P["PhotoStudy"]
   R -->|"Permission and sampling"| V["LiveSession"]
   P -->|"Detect, confirm, inspect, analyze"| S["Loopback FastAPI"]
   V -->|"POST /api/live/frame"| S
@@ -30,7 +30,7 @@ flowchart TD
   U -->|"LIVE raw frames"| G["T7.2 scoring"]
 ```
 
-[`src/t62_web.py`](../src/t62_web.py) serves the T7.2 build via [`src/t54_web.py`](../src/t54_web.py), which layers LIVE over T5.3 compatibility, T5.2 detection and T5.1 inference. [`AppT72.jsx`](../web/human-signal/src/AppT72.jsx) owns layout and mode orchestration. Uvicorn listens on loopback. One ensemble is loaded per server process.
+The [server](../backend/server.py) registers classification, face detection, optional photo conversion, live sampling and chart routes before mounting the production frontend. The [React shell](../frontend/src/App.jsx) switches modes. All modes share one process-local model ensemble.
 
 | Route | Implementation | Output or role |
 | --- | --- | --- |
